@@ -35,7 +35,7 @@ ip route'''
 
     stage('Deploy') {
       { 
-        when 'branch' = 'master'
+        when branch 'master'
       }
       steps {
         echo 'This is deploy stage'
