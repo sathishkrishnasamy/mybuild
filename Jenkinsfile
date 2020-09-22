@@ -38,7 +38,7 @@ ip route'''
         branch 'master'
       }
       steps {
-        echo 'This is deploy stages'
+        echo 'This is deploy stage'
       }
     }
 
