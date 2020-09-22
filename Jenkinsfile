@@ -8,8 +8,28 @@ pipeline {
     }
 
     stage('Test') {
-      steps {
-        echo 'This is Test stage'
+      parallel {
+        stage('Test') {
+          steps {
+            echo 'This is Test stage'
+          }
+        }
+
+        stage('int test') {
+          steps {
+            sh '''echo "This is int test"
+df -h'''
+          }
+        }
+
+        stage('load test') {
+          steps {
+            sh '''echo "This is load test"
+ip addr
+ip route'''
+          }
+        }
+
       }
     }
 
