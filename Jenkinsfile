@@ -34,11 +34,11 @@ ip route'''
     }
 
     stage('Deploy') {
-      when { 
+      when {
         branch 'master'
-        }
+      }
       steps {
-        echo 'This is deploy stage'
+        echo 'This is deploy stages'
       }
     }
 
